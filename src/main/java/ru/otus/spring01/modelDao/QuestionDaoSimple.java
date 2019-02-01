@@ -13,7 +13,7 @@ import java.util.List;
 public class QuestionDaoSimple implements QuestionDao {
 
     public List<Question> makeQuestions(PersonDao person) {
-        List<Question> questions = new ArrayList();
+        List<Question> questions = new ArrayList<Question>();
         FileService fileService = new CsvServiceImpl();
         for (String q : fileService.read()) {
             questions.add(new Question(q, person));

@@ -18,7 +18,7 @@ public class QuestionServiceImpl implements QuestionService {
     private  List<Question> questions;
     private  List<String> answers = new ArrayList<String>() ;
 
-    public void AskAnswers() {
+    public void askAnswers() {
         System.out.println("Hello give us a couple of answers");
         Scanner sc = new Scanner(System.in);
         String answer;
@@ -33,7 +33,7 @@ public class QuestionServiceImpl implements QuestionService {
         this.questions = questionDao.makeQuestions(person) ;
     }
 
-    public void ShowAnswers() {
+    public void showAnswers() {
         System.out.println("test result: ");
         System.out.println(answers);
     }

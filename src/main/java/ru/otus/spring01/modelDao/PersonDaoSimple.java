@@ -1,6 +1,6 @@
-package ru.otus.spring01.dao;
+package ru.otus.spring01.modelDao;
 
-import ru.otus.spring01.domain.Person;
+import ru.otus.spring01.dto.Person;
 
 public class PersonDaoSimple implements PersonDao {
     private int defaultAge;
@@ -9,8 +9,8 @@ public class PersonDaoSimple implements PersonDao {
         this.defaultAge = defaultAge;
     }
 
-    public Person findByName(String name) {
-        return new Person(name, defaultAge);
+    public Person findByName(String name, String surname) {
+        return new Person(name, surname, defaultAge);
     }
 
 }

@@ -1,8 +1,9 @@
 package ru.otus.spring01;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ru.otus.spring01.domain.Person;
+import ru.otus.spring01.dto.Person;
 import ru.otus.spring01.service.PersonService;
+import ru.otus.spring01.service.QuestionService;
 
 public class Main {
 
@@ -10,7 +11,10 @@ public class Main {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("spring-context.xml");
         PersonService s = context.getBean(PersonService.class);
-        Person ivan = s.getByName("ivan");
-        System.out.println("name: " + ivan.getName() + " age: " + ivan.getAge());
+        QuestionService qs = context.getBean(QuestionService.class);
+        Person ivan = s.getByName("ivan", "petrov");
+        System.out.println("name: " + ivan.getName() + " surname: " + ivan.getSurname() + " age: " + ivan.getAge());
+        qs.AskAnswers();
+        qs.ShowAnswers();
     }
 }

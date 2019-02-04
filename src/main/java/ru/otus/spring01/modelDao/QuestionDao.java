@@ -8,5 +8,5 @@ import java.util.List;
  * @author Sergey Kuzhel
  */
 public interface QuestionDao {
-    List<Question> makeQuestions(PersonDao person);
+    List<Question> makeQuestions();
 }

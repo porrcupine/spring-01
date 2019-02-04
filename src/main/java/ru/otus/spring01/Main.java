@@ -1,15 +1,22 @@
 package ru.otus.spring01;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.otus.spring01.dto.Person;
+import ru.otus.spring01.service.FileService;
 import ru.otus.spring01.service.PersonService;
 import ru.otus.spring01.service.QuestionService;
+import ru.otus.spring01.service.impl.CsvServiceImpl;
 
+@ComponentScan
+@Configuration
 public class Main {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("spring-context.xml");
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(Main.class);
         PersonService s = context.getBean(PersonService.class);
         QuestionService qs = context.getBean(QuestionService.class);
         Person ivan = s.getByName("ivan", "petrov");

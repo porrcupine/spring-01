@@ -1,5 +1,6 @@
 package ru.otus.spring01.service.impl;
 
+import org.springframework.stereotype.Service;
 import ru.otus.spring01.service.FileService;
 
 import java.io.BufferedReader;
@@ -12,12 +13,13 @@ import java.util.List;
 /**
  * @author Sergey Kuzhel
  */
+@Service
 public class CsvServiceImpl implements FileService {
 
     public List<String> read() {
         List<String> questionsText = new ArrayList();
         try {
-            BufferedReader br = new BufferedReader(new FileReader("src/main/resources/questions.csv"));;
+            BufferedReader br = new BufferedReader(new FileReader("src/main/resources/questions.csv"));
             String line = br.readLine();
             while (line != null) {
                 questionsText.add(line);

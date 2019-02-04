@@ -1,7 +1,9 @@
 package ru.otus.spring01.modelDao;
 
+import org.springframework.stereotype.Repository;
 import ru.otus.spring01.dto.Person;
 
+@Repository("personDao")
 public class PersonDaoSimple implements PersonDao {
     private int defaultAge;
 

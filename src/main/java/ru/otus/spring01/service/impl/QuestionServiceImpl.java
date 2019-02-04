@@ -1,5 +1,6 @@
 package ru.otus.spring01.service.impl;
 
+import org.springframework.stereotype.Service;
 import ru.otus.spring01.dto.Question;
 import ru.otus.spring01.modelDao.PersonDao;
 import ru.otus.spring01.modelDao.QuestionDao;
@@ -13,6 +14,7 @@ import java.util.Scanner;
 /**
  * @author Sergey Kuzhel
  */
+@Service
 public class QuestionServiceImpl implements QuestionService {
     QuestionDao questionDao = new QuestionDaoSimple();
     private  List<Question> questions;

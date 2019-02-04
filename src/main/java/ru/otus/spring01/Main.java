@@ -14,7 +14,7 @@ public class Main {
         QuestionService qs = context.getBean(QuestionService.class);
         Person ivan = s.getByName("ivan", "petrov");
         System.out.println("name: " + ivan.getName() + " surname: " + ivan.getSurname() + " age: " + ivan.getAge());
-        qs.AskAnswers();
-        qs.ShowAnswers();
+        qs.askAnswers();
+        qs.showAnswers();
     }
 }

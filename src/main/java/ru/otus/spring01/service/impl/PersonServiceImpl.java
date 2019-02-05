@@ -1,5 +1,6 @@
 package ru.otus.spring01.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.otus.spring01.modelDao.PersonDao;
 import ru.otus.spring01.dto.Person;
@@ -10,6 +11,7 @@ public class PersonServiceImpl implements PersonService {
 
     private PersonDao dao;
 
+    @Autowired
     public PersonServiceImpl(PersonDao dao) {
         this.dao = dao;
     }

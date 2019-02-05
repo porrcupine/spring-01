@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * @author Sergey Kuzhel
  */
-@Repository
+@Repository("questionDao")
 public class QuestionDaoSimple implements QuestionDao {
 
     public List<Question> makeQuestions() {

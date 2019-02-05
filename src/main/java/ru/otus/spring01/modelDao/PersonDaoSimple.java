@@ -1,5 +1,6 @@
 package ru.otus.spring01.modelDao;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 import ru.otus.spring01.dto.Person;
 
@@ -7,6 +8,7 @@ import ru.otus.spring01.dto.Person;
 public class PersonDaoSimple implements PersonDao {
     private int defaultAge;
 
+    @Value("28")
     public void setDefaultAge(int defaultAge) {
         this.defaultAge = defaultAge;
     }

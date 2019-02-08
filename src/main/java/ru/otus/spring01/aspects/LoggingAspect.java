@@ -23,12 +23,12 @@ public class LoggingAspect {
 
     @Before("execution(* ru.otus.spring01.service.impl.QuestionServiceImpl.*(..))")
     public void logBefore(JoinPoint joinPoint) {
-        System.out.println("method ask a questions and get answers: " + joinPoint.getSignature());
+        System.out.println("method asks a questions and get answers: " + joinPoint.getSignature());
     }
 
     @Around("execution(* ru.otus.spring01.service.impl.PersonServiceImpl.*(..))")
     public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
-        System.out.println("method get person by name : " + joinPoint.getSignature());
+        System.out.println("method gets person by name : " + joinPoint.getSignature());
        // System.out.println("method  has an arguments: " + Arrays.toString(joinPoint.getArgs()));
 
         System.out.println("before running");
